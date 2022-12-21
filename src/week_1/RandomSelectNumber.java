@@ -11,13 +11,14 @@ public class RandomSelectNumber {
     }
 
     public void run() {
-
+        // The program will run on this method
         System.out.println("-----------------------------------");
 
         boolean isActive = true;
         while (isActive) {
 
-            this.getNewNumber();
+            this.createNewNumber();
+            this.increaseCount();
             if (this.number >= 50 && this.number <= 100) {
                 System.out.println("We successfully finished this job.");
                 System.out.println("The number is: " + this.number + ", the count is: " + this.count);
@@ -28,12 +29,14 @@ public class RandomSelectNumber {
     }
 
 
-    private void getNewNumber() {
+    private void createNewNumber() {
         // To create new random number
 
         Random random = new Random();
         this.number = random.nextInt( 500);
+    }
+    private void increaseCount() {
+        // To increase count variable.
         this.count++;
-
     }
 }
