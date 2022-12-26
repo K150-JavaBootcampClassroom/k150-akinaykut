@@ -1,5 +1,6 @@
 package week_2;
 
+// This class created for car which type is Sedan
 public class SedanCar extends AbstractCar {
     SedanCar(){
         super();
@@ -8,11 +9,18 @@ public class SedanCar extends AbstractCar {
         super(luggageSize, priceOfRent, ageOfCar, color);
     }
 
+    // This method calculate rent price
     public double calculateRentPrice(int day, int priceOfRent){
         return day * priceOfRent;
     }
 
+    // This method rent a sedan car for a month
     public void rentACarForAMonth() {
-        this.rentACar(30);
+        super.rentACar(30);
+    }
+
+    // This method rent a sedan car for a month with username information
+    public void rentACarForAMonth(String customerName) {
+        super.rentACar(30, customerName);
     }
 }

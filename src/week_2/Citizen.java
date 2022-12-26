@@ -1,8 +1,9 @@
 package week_2;
 
+// This class created for citizens to rent a car
 public class Citizen extends Customer{
 
-
+    // The constructor methods
     Citizen(String customerName) {
         super(customerName);
         super.hatchbackCar = new HatchbackCar();
@@ -13,9 +14,11 @@ public class Citizen extends Customer{
 
     }
 
-    public void rentAHatchbackCar() {
-        this.hatchbackCar.rentACar();
+    // This method rent a car for citizen only one day.
+    public void rentAHatchbackCarForADay() {
+        super.hatchbackCar.rentACar(super.customerName);
     }
 
+    // The citizens cannot rent a vehicle other than the hatchback type
 
 }
