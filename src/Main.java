@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Scanner;
 import week_1.*;
 import java.time.*;
@@ -5,8 +6,7 @@ import java.time.*;
 
 public class Main {
 
-    public static void main(String args[]) {
-        }
+    public static void main(String args[]) {}
 
     }
 
