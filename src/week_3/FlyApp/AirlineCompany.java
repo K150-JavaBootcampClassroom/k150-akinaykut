@@ -1,48 +1,47 @@
 package week_3.FlyApp;
 
-import java.time.Clock;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.HashMap;
 
+// Parent class of airlineCompanies
 public class AirlineCompany {
-    private String companyName;
-    private int taxNumber;
 
-    private ArrayList<Voyage> voyages;
-    {
-        voyages = new ArrayList<>();
+    private AirlineCompanyType airlineCompanyType;
 
+    // Storage all voyage for each airline company
+    private ArrayList<Voyage> voyageList;
+
+    // Constructor method
+    public AirlineCompany(AirlineCompanyType airlineCompanyType) {
+        this.airlineCompanyType = airlineCompanyType;
+        this.voyageList = new ArrayList<>();
     }
 
-    public AirlineCompany(String companyName) {
-        this.companyName = companyName;
+    public AirlineCompanyType getAirlineCompanyType() {
+        return airlineCompanyType;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public void setAirlineCompanyType(AirlineCompanyType airlineCompanyType) {
+        this.airlineCompanyType = airlineCompanyType;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public ArrayList<Voyage> getVoyageList() {
+        return voyageList;
     }
 
-    public int getTaxNumber() {
-        return taxNumber;
+    public void setVoyageList(ArrayList<Voyage> voyageList) {
+        this.voyageList = voyageList;
     }
 
-    public void setTaxNumber(int taxNumber) {
-        this.taxNumber = taxNumber;
-    }
 
-    public ArrayList<Voyage> getVoyages() {
-        return voyages;
+    // It  shows all voyages inside of the airline company
+    public void showVoyageList() {
+        for(Voyage voyage : voyageList) {
+            System.out.println("Airline Company: " + airlineCompanyType);
+            System.out.println("-------------------------------");
+            System.out.println("Voyage Type: " + voyage.getVoyageType());
+            System.out.println("Departure Point: " + voyage.getDeparturePoint() + " | Arrive Point: " + voyage.getArrivePoint());
+        }
     }
-
-    public void setVoyages(ArrayList<Voyage> voyages) {
-        this.voyages = voyages;
-    }
-
 
 
 }

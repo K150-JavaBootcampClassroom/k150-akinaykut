@@ -3,51 +3,35 @@ package week_3.FlyApp;
 import java.util.HashMap;
 
 public class Plane {
+    // This class represent a plane which one will fly
 
-   private String type;
-   private HashMap<String, Boolean> chairList;
+    private HashMap<String, Chair> chairList;
+    // All chairs inside of the plane
     {
         chairList = new HashMap<>();
-        chairList.put("A1", false);
-        chairList.put("A2", false);
-        chairList.put("A3", false);
-        chairList.put("A4", false);
-        chairList.put("A5", false);
-        chairList.put("B1", false);
-        chairList.put("B2", false);
-        chairList.put("B3", false);
-        chairList.put("B4", false);
-        chairList.put("B5", false);
-        chairList.put("C1", false);
-        chairList.put("C2", false);
-        chairList.put("C3", false);
-        chairList.put("C4", false);
-        chairList.put("C5", false);
-
+        chairList.put("A1", new Chair(ChairType.Business, "A1") );
+        chairList.put("A2", new Chair(ChairType.Business, "A2") );
+        chairList.put("A3", new Chair(ChairType.Business, "A3") );
+        chairList.put("A4", new Chair(ChairType.Business, "A4") );
+        chairList.put("A5", new Chair(ChairType.Business, "A5") );
+        chairList.put("B1", new Chair(ChairType.Economy, "B1") );
+        chairList.put("B2", new Chair(ChairType.Economy, "B2") );
+        chairList.put("B3", new Chair(ChairType.Economy, "B3") );
+        chairList.put("B4", new Chair(ChairType.Economy, "B4") );
+        chairList.put("B5", new Chair(ChairType.Economy, "B5") );
 
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public HashMap<String, Boolean> getChairList() {
+    // Getters and Setters methods
+    public HashMap<String, Chair> getChairList() {
         return chairList;
     }
 
-    public void setChairList(HashMap<String, Boolean> chairList) {
+    public void setChairList(HashMap<String, Chair> chairList) {
         this.chairList = chairList;
     }
 
-    public Plane(){
-        type = "Boeing 737F";
-    }
 
-    public void setChairState(String chairNumber) {
-        chairList.put(chairNumber, true);
-    }
+
+
 }
